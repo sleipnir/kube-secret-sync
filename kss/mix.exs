@@ -1,11 +1,14 @@
 defmodule Kss.MixProject do
   use Mix.Project
 
+  @app :kss
+  @version "0.1.0"
+
   def project do
     [
-      app: :kss,
-      version: "0.1.0",
-      elixir: "~> 1.14",
+      app: @app,
+      version: @version,
+      elixir: "~> 1.15",
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
@@ -18,11 +21,14 @@ defmodule Kss.MixProject do
     ]
   end
 
-  # Run "mix help deps" to learn about dependencies.
-  defp deps do
+  def deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      {:bonny, "~> 1.4"},
+      {:libvault, "~> 0.2"},
+      {:tesla, "~> 1.3"},
+      {:mint, "~> 1.0"},
+      {:castore, "~> 1.0"},
+      {:jason, "~> 1.3"}
     ]
   end
 end
