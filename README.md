@@ -9,7 +9,8 @@ KubeSecretSync integrates with your Kubernetes deployments using annotations. Fo
 ## Installation
 
 1. Deploy KubeSecretSync.
-Apply the KubeSecretSync deployment manifest to your Kubernetes cluster:
+
+    Apply the KubeSecretSync deployment manifest to your Kubernetes cluster:
 
 ```
 kubectl apply -f https://path/to/kubesecretsync/deployment.yaml
@@ -18,7 +19,8 @@ kubectl apply -f https://path/to/kubesecretsync/deployment.yaml
 ## Usage
 
 2. Annotate Your Deployment
-Add the following annotations to your Kubernetes deployment to specify which secrets to synchronize:
+
+    Add the following annotations to your Kubernetes deployment to specify which secrets to synchronize:
 
 ```yaml
 apiVersion: apps/v1
