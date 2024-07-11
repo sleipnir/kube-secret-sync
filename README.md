@@ -28,10 +28,10 @@ kind: Deployment
 metadata:
   name: example-app
   annotations:
-    kss.provider.vault/path: "secret/data/example-app"
-    kss.provider.vault/keys: "db-username,db-password"
-    kss.provider.config/config-secret: "vault-kss-secret"
-    kss.provider.config/config-secret-namespace: "kss-ns"
+    kss.provider/name: "vault-config"
+    kss.provider/path: "secret/data/example-app"
+    kss.provider/keys: "db-username,db-password"
+    kss.secret/destination: "example-app-secrets"
 spec:
   replicas: 1
   selector:
