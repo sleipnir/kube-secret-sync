@@ -15,8 +15,8 @@ defmodule Kss.Managers.Adapters.Vault.SecretManager do
 
       {:ok, vault} =
         Vault.new(
-          auth: auth_module
-          engine: Vault.Engine.KVV2,
+          auth: auth_module,
+          engine: Vault.Engine.KVV2
         )
         |> do_login(opts)
 
